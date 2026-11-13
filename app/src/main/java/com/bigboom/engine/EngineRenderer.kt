@@ -42,7 +42,7 @@ class EngineRenderer : GLSurfaceView.Renderer {
         GLES30.glEnable(GLES30.GL_DEPTH_TEST)
         GLES30.glEnable(GLES30.GL_CULL_FACE)
         GLES30.glCullFace(GLES30.GL_BACK)
-        program = createProgram(VERTEX_SHADER, FRAGMENT_SHADER)
+        program = createProgram(VERTEX_SHADER.trimIndent(), FRAGMENT_SHADER.trimIndent())
         mvpHandle = GLES30.glGetUniformLocation(program, "uMvp")
         modelHandle = GLES30.glGetUniformLocation(program, "uModel")
         colorHandle = GLES30.glGetUniformLocation(program, "uColor")
